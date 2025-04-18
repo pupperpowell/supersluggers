@@ -1,0 +1,722 @@
+[
+  {
+    "id": 1,
+    "name": "Mario",
+    "pitching": 6,
+    "batting": 7,
+    "fielding": 6,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/e/e4/MSS_Mario_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 2,
+    "name": "Luigi",
+    "pitching": 6,
+    "batting": 6,
+    "fielding": 7,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/5/50/MSS_Luigi_Character_Select_Sprite_1.png",
+    "isCaptain": true
+  },
+  {
+    "id": 3,
+    "name": "Yoshi",
+    "pitching": 4,
+    "batting": 4,
+    "fielding": 6,
+    "running": 9,
+    "image": "https://mario.wiki.gallery/images/5/5b/MSS_Yoshi_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 4,
+    "name": "Bowser",
+    "pitching": 5,
+    "batting": 10,
+    "fielding": 3,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/5/5e/MSS_Bowser_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 5,
+    "name": "Bowser Jr.",
+    "pitching": 5,
+    "batting": 7,
+    "fielding": 4,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/3/34/MSS_Bowser_Jr_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 6,
+    "name": "Wario",
+    "pitching": 5,
+    "batting": 8,
+    "fielding": 3,
+    "running": 4,
+    "image": "https://mario.wiki.gallery/images/9/96/MSS_Wario_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 7,
+    "name": "Waluigi",
+    "pitching": 8,
+    "batting": 4,
+    "fielding": 8,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/9/9e/MSS_Waluigi_Character_Select_Sprite_1.png",
+    "isCaptain": true
+  },
+  {
+    "id": 8,
+    "name": "Donkey Kong",
+    "pitching": 6,
+    "batting": 9,
+    "fielding": 3,
+    "running": 2,
+    "image": "https://mario.wiki.gallery/images/c/c5/MSS_Donkey_Kong_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 9,
+    "name": "Diddy Kong",
+    "pitching": 5,
+    "batting": 4,
+    "fielding": 8,
+    "running": 6,
+    "image": "https://mario.wiki.gallery/images/6/61/MSS_Diddy_Kong_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 10,
+    "name": "Peach",
+    "pitching": 9,
+    "batting": 4,
+    "fielding": 8,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/f/f4/MSS_Peach_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 11,
+    "name": "Daisy",
+    "pitching": 7,
+    "batting": 6,
+    "fielding": 8,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/3/3e/MSS_Daisy_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 12,
+    "name": "Birdo",
+    "pitching": 4,
+    "batting": 8,
+    "fielding": 7,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/6/69/MSS_Birdo_Character_Select_Sprite.png",
+    "isCaptain": true
+  },
+  {
+    "id": 13,
+    "name": "Red Yoshi",
+    "pitching": 3,
+    "batting": 4,
+    "fielding": 4,
+    "running": 8,
+    "image": "https://mario.wiki.gallery/images/3/34/MSS_Red_Yoshi_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 14,
+    "name": "Blue Yoshi",
+    "pitching": 4,
+    "batting": 2,
+    "fielding": 6,
+    "running": 8,
+    "image": "https://mario.wiki.gallery/images/6/6a/MSS_Blue_Yoshi_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 15,
+    "name": "Yellow Yoshi",
+    "pitching": 3,
+    "batting": 4,
+    "fielding": 6,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/6/6c/MSS_Yellow_Yoshi_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 16,
+    "name": "Light Blue Yoshi",
+    "pitching": 3,
+    "batting": 3,
+    "fielding": 6,
+    "running": 8,
+    "image": "https://mario.wiki.gallery/images/5/56/MSS_Light-Blue_Yoshi_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 17,
+    "name": "Pink Yoshi",
+    "pitching": 2,
+    "batting": 3,
+    "fielding": 6,
+    "running": 9,
+    "image": "https://mario.wiki.gallery/images/9/94/MSS_Pink_Yoshi_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 18,
+    "name": "Hammer Bro",
+    "pitching": 4,
+    "batting": 7,
+    "fielding": 6,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/a/a4/MSS_Hammer_Bro_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 19,
+    "name": "Fire Bro",
+    "pitching": 3,
+    "batting": 8,
+    "fielding": 6,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/c/ce/MSS_Fire_Bro_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 20,
+    "name": "Boomerang Bro",
+    "pitching": 5,
+    "batting": 7,
+    "fielding": 5,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/6/66/MSS_Boomerang_Bro_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 21,
+    "name": "Dry Bones",
+    "pitching": 4,
+    "batting": 7,
+    "fielding": 4,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/d/d2/MSS_Dry_Bones_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 22,
+    "name": "Green Dry Bones",
+    "pitching": 3,
+    "batting": 7,
+    "fielding": 4,
+    "running": 6,
+    "image": "https://mario.wiki.gallery/images/6/66/MSS_Green_Dry_Bones_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 23,
+    "name": "Dark Dry Bones",
+    "pitching": 5,
+    "batting": 7,
+    "fielding": 4,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/6/68/MSS_Dark_Bones_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 24,
+    "name": "Blue Dry Bones",
+    "pitching": 3,
+    "batting": 7,
+    "fielding": 5,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/2/23/MSS_Blue_Dry_Bones_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 25,
+    "name": "Funky Kong",
+    "pitching": 4,
+    "batting": 8,
+    "fielding": 6,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/9/93/MSS_Funky_Kong_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 26,
+    "name": "Dixie Kong",
+    "pitching": 2,
+    "batting": 2,
+    "fielding": 8,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/e/e1/MSS_Dixie_Kong_Character_Select_Sprite_1.png",
+    "isCaptain": false
+  },
+  {
+    "id": 27,
+    "name": "Green Koopa Troopa",
+    "pitching": 3,
+    "batting": 6,
+    "fielding": 4,
+    "running": 6,
+    "image": "https://mario.wiki.gallery/images/a/ac/MSS_Green_Koopa_Troopa_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 28,
+    "name": "Red Koopa Troopa",
+    "pitching": 4,
+    "batting": 6,
+    "fielding": 3,
+    "running": 6,
+    "image": "https://mario.wiki.gallery/images/3/36/MSS_Red_Koopa_Troopa_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 29,
+    "name": "Red Toad",
+    "pitching": 5,
+    "batting": 5,
+    "fielding": 3,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/6/62/MSS_Red_Toad_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 30,
+    "name": "Blue Toad",
+    "pitching": 4,
+    "batting": 6,
+    "fielding": 3,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/4/48/MSS_Blue_Toad_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 31,
+    "name": "Yellow Toad",
+    "pitching": 3,
+    "batting": 6,
+    "fielding": 4,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/e/e9/MSS_Yellow_Toad_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 32,
+    "name": "Green Toad",
+    "pitching": 4,
+    "batting": 5,
+    "fielding": 4,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/c/ca/MSS_Green_Toad_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 33,
+    "name": "Purple Toad",
+    "pitching": 5,
+    "batting": 6,
+    "fielding": 2,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/6/67/MSS_Purple_Toad_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 34,
+    "name": "Toadsworth",
+    "pitching": 7,
+    "batting": 3,
+    "fielding": 7,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/5/5f/MSS_Toadsworth_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 35,
+    "name": "Toadette",
+    "pitching": 5,
+    "batting": 3,
+    "fielding": 4,
+    "running": 8,
+    "image": "https://mario.wiki.gallery/images/8/87/MSS_Toadette_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 36,
+    "name": "Blue Noki",
+    "pitching": 5,
+    "batting": 4,
+    "fielding": 4,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/8/8a/MSS_Blue_Noki_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 37,
+    "name": "Red Noki",
+    "pitching": 4,
+    "batting": 4,
+    "fielding": 5,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/f/f0/MSS_Red_Noki_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 38,
+    "name": "Green Noki",
+    "pitching": 4,
+    "batting": 5,
+    "fielding": 4,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/5/5e/MSS_Green_Noki_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 39,
+    "name": "Baby Mario",
+    "pitching": 5,
+    "batting": 3,
+    "fielding": 4,
+    "running": 8,
+    "image": "https://mario.wiki.gallery/images/8/8b/MSS_Baby_Mario_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 40,
+    "name": "Baby Luigi",
+    "pitching": 5,
+    "batting": 2,
+    "fielding": 5,
+    "running": 8,
+    "image": "https://mario.wiki.gallery/images/1/1c/MSS_Baby_Luigi_Character_Select_Sprite_1.png",
+    "isCaptain": false
+  },
+  {
+    "id": 41,
+    "name": "Baby Peach",
+    "pitching": 8,
+    "batting": 2,
+    "fielding": 5,
+    "running": 6,
+    "image": "https://mario.wiki.gallery/images/4/49/MSS_Baby_Peach_Character_Select_Sprite_1.png",
+    "isCaptain": false
+  },
+  {
+    "id": 42,
+    "name": "Baby Daisy",
+    "pitching": 6,
+    "batting": 4,
+    "fielding": 5,
+    "running": 6,
+    "image": "https://mario.wiki.gallery/images/7/72/MSS_Baby_Daisy_Character_Select_Sprite_1.png",
+    "isCaptain": false
+  },
+  {
+    "id": 43,
+    "name": "Red Shy Guy",
+    "pitching": 4,
+    "batting": 5,
+    "fielding": 7,
+    "running": 4,
+    "image": "https://mario.wiki.gallery/images/0/0c/MSS_Red_Shy_Guy_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 44,
+    "name": "Blue Shy Guy",
+    "pitching": 5,
+    "batting": 4,
+    "fielding": 7,
+    "running": 4,
+    "image": "https://mario.wiki.gallery/images/0/0a/MSS_Blue_Shy_Guy_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 45,
+    "name": "Yellow Shy Guy",
+    "pitching": 4,
+    "batting": 4,
+    "fielding": 7,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/7/71/MSS_Yellow_Shy_Guy_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 46,
+    "name": "Green Shy Guy",
+    "pitching": 3,
+    "batting": 5,
+    "fielding": 7,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/f/f2/MSS_Green_Shy_Guy_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 47,
+    "name": "Grey Shy Guy",
+    "pitching": 4,
+    "batting": 4,
+    "fielding": 8,
+    "running": 4,
+    "image": "https://mario.wiki.gallery/images/7/7f/MSS_Gray_Shy_Guy_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 48,
+    "name": "Green Paratroopa",
+    "pitching": 3,
+    "batting": 5,
+    "fielding": 7,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/f/fd/MSS_Green_Koopa_Paratroopa_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 49,
+    "name": "Red Paratroopa",
+    "pitching": 4,
+    "batting": 4,
+    "fielding": 7,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/9/9c/MSS_Red_Koopa_Paratroopa_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 50,
+    "name": "Blue Pianta",
+    "pitching": 5,
+    "batting": 8,
+    "fielding": 4,
+    "running": 2,
+    "image": "https://mario.wiki.gallery/images/0/05/MSS_Blue_Pianta_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 51,
+    "name": "Red Pianta",
+    "pitching": 4,
+    "batting": 8,
+    "fielding": 4,
+    "running": 2,
+    "image": "https://mario.wiki.gallery/images/d/d9/MSS_Red_Pianta_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 52,
+    "name": "Yellow Pianta",
+    "pitching": 4,
+    "batting": 8,
+    "fielding": 4,
+    "running": 2,
+    "image": "https://mario.wiki.gallery/images/e/ef/MSS_Yellow_Pianta_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 53,
+    "name": "Boo",
+    "pitching": 9,
+    "batting": 3,
+    "fielding": 3,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/c/ca/MSS_Boo_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 54,
+    "name": "King Boo",
+    "pitching": 7,
+    "batting": 7,
+    "fielding": 3,
+    "running": 4,
+    "image": "https://mario.wiki.gallery/images/7/74/MSS_King_Boo_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 55,
+    "name": "Petey Piranha",
+    "pitching": 4,
+    "batting": 10,
+    "fielding": 5,
+    "running": 2,
+    "image": "https://mario.wiki.gallery/images/0/05/MSS_Petey_Piranha_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 56,
+    "name": "Wiggler",
+    "pitching": 3,
+    "batting": 7,
+    "fielding": 4,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/8/81/MSS_Wiggler_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 57,
+    "name": "Blooper",
+    "pitching": 6,
+    "batting": 4,
+    "fielding": 5,
+    "running": 6,
+    "image": "https://mario.wiki.gallery/images/8/86/MSS_Blooper_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 58,
+    "name": "Goomba",
+    "pitching": 6,
+    "batting": 3,
+    "fielding": 6,
+    "running": 4,
+    "image": "https://mario.wiki.gallery/images/f/ff/MSS_Goomba_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 59,
+    "name": "Paragoomba",
+    "pitching": 6,
+    "batting": 3,
+    "fielding": 7,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/7/70/MSS_Paragoomba_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 60,
+    "name": "Magikoopa",
+    "pitching": 8,
+    "batting": 2,
+    "fielding": 8,
+    "running": 2,
+    "image": "https://mario.wiki.gallery/images/3/34/MSS_Blue_Magikoopa_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 61,
+    "name": "Red Magikoopa",
+    "pitching": 8,
+    "batting": 3,
+    "fielding": 8,
+    "running": 1,
+    "image": "https://mario.wiki.gallery/images/2/2f/MSS_Red_Magikoopa_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 62,
+    "name": "Green Magikoopa",
+    "pitching": 7,
+    "batting": 2,
+    "fielding": 8,
+    "running": 2,
+    "image": "https://mario.wiki.gallery/images/7/70/MSS_Green_Magikoopa_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 63,
+    "name": "Yellow Magikoopa",
+    "pitching": 7,
+    "batting": 3,
+    "fielding": 8,
+    "running": 2,
+    "image": "https://mario.wiki.gallery/images/e/e9/MSS_Yellow_Magikoopa_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 64,
+    "name": "King K. Rool",
+    "pitching": 6,
+    "batting": 10,
+    "fielding": 2,
+    "running": 1,
+    "image": "https://mario.wiki.gallery/images/c/c2/MSS_King_K_Rool_Character_Select_Sprite_1.png",
+    "isCaptain": false
+  },
+  {
+    "id": 65,
+    "name": "Kritter",
+    "pitching": 4,
+    "batting": 7,
+    "fielding": 7,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/6/61/MSS_Green_Kritter_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 66,
+    "name": "Blue Kritter",
+    "pitching": 5,
+    "batting": 6,
+    "fielding": 7,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/f/f4/MSS_Blue_Kritter_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 67,
+    "name": "Red Kritter",
+    "pitching": 3,
+    "batting": 8,
+    "fielding": 7,
+    "running": 3,
+    "image": "https://mario.wiki.gallery/images/b/b7/MSS_Red_Kritter_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 68,
+    "name": "Brown Kritter",
+    "pitching": 3,
+    "batting": 7,
+    "fielding": 7,
+    "running": 4,
+    "image": "https://mario.wiki.gallery/images/0/0c/MSS_Brown_Kritter_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 69,
+    "name": "Tiny Kong",
+    "pitching": 5,
+    "batting": 5,
+    "fielding": 7,
+    "running": 5,
+    "image": "https://mario.wiki.gallery/images/8/84/MSS_Tiny_Kong_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 70,
+    "name": "Baby Donkey Kong",
+    "pitching": 3,
+    "batting": 6,
+    "fielding": 8,
+    "running": 4,
+    "image": "https://mario.wiki.gallery/images/e/ef/MSS_Baby_Donkey_Kong_Character_Select_Sprite_1.png",
+    "isCaptain": false
+  },
+  {
+    "id": 71,
+    "name": "Monty Mole",
+    "pitching": 4,
+    "batting": 4,
+    "fielding": 5,
+    "running": 7,
+    "image": "https://mario.wiki.gallery/images/e/e1/MSS_Monty_Mole_Character_Select_Sprite.png",
+    "isCaptain": false
+  },
+  {
+    "id": 72,
+    "name": "Mii",
+    "pitching": 5,
+    "batting": 5,
+    "fielding": 5,
+    "running": 5,
+    "image": "https://static.wikia.nocookie.net/0dfb5b2c-e17e-473d-903a-3e1597555f4e",
+    "isCaptain": false
+  }
+]

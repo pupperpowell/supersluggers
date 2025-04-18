@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "server": "deno run --allow-read --allow-net main.ts --server",
+    "start": "deno run --allow-read main.ts",
+    "test": "deno test --allow-read"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "synaptic": "npm:synaptic@^1.1.4"
+  }
+}
