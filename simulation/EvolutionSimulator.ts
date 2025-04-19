@@ -13,7 +13,7 @@ export class EvolutionSimulator {
   generationResults: GenerationResult[] = [];
   onGenerationComplete?: (result: GenerationResult) => void;
 
-  constructor(numAgents: number = 8, maxGenerations: number = 100000) {
+  constructor(numAgents: number = 8, maxGenerations: number = 1) {
     // Create initial agents
     const agents: DraftingAgent[] = [];
     for (let i = 0; i < numAgents; i++) {
@@ -54,39 +54,47 @@ export class EvolutionSimulator {
   // Print player statistics summary
   printPlayerStatsSummary(): void {
     console.log("\n=== PLAYER STATISTICS SUMMARY ===");
-    
+
     // Get the global player statistics
     const globalPlayerStats = this.tournament.getGlobalPlayerStats();
-    
+
     // Convert map to array for sorting
     const playerStatsArray = Array.from(globalPlayerStats.values());
-    
+
     // Sort batters by runs scored
     const topBatters = [...playerStatsArray]
-      .filter(stats => stats.atBats > 0)
+      .filter((stats) => stats.atBats > 0)
       .sort((a, b) => b.runs - a.runs);
-      
+
     console.log("\nTop Batters by Runs Scored:");
     topBatters.slice(0, 10).forEach((stats, index) => {
       const battingAvg = stats.runs / stats.atBats;
       console.log(
-        `${index + 1}. ${stats.playerName} - Runs: ${stats.runs}, At Bats: ${stats.atBats}, Avg: ${battingAvg.toFixed(3)}`
+        `${
+          index + 1
+        }. ${stats.playerName} - Runs: ${stats.runs}, At Bats: ${stats.atBats}, Avg: ${
+          battingAvg.toFixed(3)
+        }`,
       );
     });
-    
+
     // Sort pitchers by strikeouts
     const topPitchers = [...playerStatsArray]
-      .filter(stats => stats.inningsPitched > 0)
+      .filter((stats) => stats.inningsPitched > 0)
       .sort((a, b) => b.strikeouts - a.strikeouts);
-      
+
     console.log("\nTop Pitchers by Strikeouts:");
     topPitchers.slice(0, 10).forEach((stats, index) => {
       const strikeoutsPerInning = stats.strikeouts / stats.inningsPitched;
       console.log(
-        `${index + 1}. ${stats.playerName} - Strikeouts: ${stats.strikeouts}, Innings Pitched: ${stats.inningsPitched}, K/IP: ${strikeoutsPerInning.toFixed(2)}`
+        `${
+          index + 1
+        }. ${stats.playerName} - Strikeouts: ${stats.strikeouts}, Innings Pitched: ${stats.inningsPitched}, K/IP: ${
+          strikeoutsPerInning.toFixed(2)
+        }`,
       );
     });
-    
+
     console.log("\n=== END OF PLAYER STATISTICS SUMMARY ===");
   }
 
@@ -171,24 +179,32 @@ export class EvolutionSimulator {
           }. ${ranking.teamName} - Wins: ${ranking.wins}, Score: ${ranking.score}`,
         );
       });
-      
+
       // Display the winning team's players
       if (finalGen.rankings.length > 0) {
         const winningAgentId = finalGen.rankings[0].agentId;
-        const winningAgent = this.tournament.agents.find(agent => agent.id === winningAgentId);
-        
+        const winningAgent = this.tournament.agents.find((agent) =>
+          agent.id === winningAgentId
+        );
+
         if (winningAgent) {
           console.log("\nWinning Team Players:");
-          console.log(`Team: ${winningAgent.team.name} (Agent ${winningAgentId})`);
+          console.log(
+            `Team: ${winningAgent.team.name} (Agent ${winningAgentId})`,
+          );
           console.log("-------------------------------------");
           winningAgent.team.players.forEach((player, idx) => {
             const captainStar = player.isCaptain ? " ★" : "";
-            console.log(`${idx + 1}. ${player.name}${captainStar} - Pitching: ${player.pitching}, Batting: ${player.batting}, Fielding: ${player.fielding}, Running: ${player.running}`);
+            console.log(
+              `${
+                idx + 1
+              }. ${player.name}${captainStar} - Pitching: ${player.pitching}, Batting: ${player.batting}, Fielding: ${player.fielding}, Running: ${player.running}`,
+            );
           });
         }
       }
     }
-    
+
     // Print player statistics summary
     this.printPlayerStatsSummary();
 
@@ -248,13 +264,21 @@ export class EvolutionSimulator {
       if (gen < this.maxGenerations - 1) {
         const newAgents = this.tournament.createNextGeneration(rankedAgents);
         this.tournament.agents = newAgents;
-        
+
         // Log information about the new generation
         console.log("\nCreating Generation " + (gen + 2) + ":");
-        console.log("Agents continuing to next generation: " + 
-                    newAgents.slice(0, 4).map(a => `Agent ${a.id}`).join(", "));
-        console.log("New offspring: " + 
-                    newAgents.slice(4, 7).map(a => `Agent ${a.id} (parent: Agent ${newAgents[newAgents.indexOf(a) - 4].id})`).join(", "));
+        console.log(
+          "Agents continuing to next generation: " +
+            newAgents.slice(0, 4).map((a) => `Agent ${a.id}`).join(", "),
+        );
+        console.log(
+          "New offspring: " +
+            newAgents.slice(4, 7).map((a) =>
+              `Agent ${a.id} (parent: Agent ${
+                newAgents[newAgents.indexOf(a) - 4].id
+              })`
+            ).join(", "),
+        );
         console.log("New random agent: Agent " + newAgents[7].id);
       }
     }

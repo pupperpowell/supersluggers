@@ -34,7 +34,7 @@ function simulateRandomTournament(allPlayers: Player[]): {
   // For each agent, track how many wins each player contributed to
   rankedAgents.forEach((agent) => {
     const wins = agent.tournamentWins;
-    
+
     // For each player on the team, add to their win count
     agent.team.players.forEach((player) => {
       const currentWins = playerWinMap.get(player.id) || 0;
@@ -44,7 +44,7 @@ function simulateRandomTournament(allPlayers: Player[]): {
 
   return {
     playerWins: playerWinMap,
-    agents: rankedAgents
+    agents: rankedAgents,
   };
 }
 
@@ -85,7 +85,7 @@ export function runPlayerRankings(
       const currentWins = playerWins.get(playerId) || 0;
       playerWins.set(playerId, currentWins + wins);
     });
-    
+
     // Track appearances for all players in this tournament
     agents.forEach((agent) => {
       agent.team.players.forEach((player) => {
@@ -110,7 +110,9 @@ export function runPlayerRankings(
     // Maximum win score per tournament: 7 (each team can play max 7 games in a round robin of 8 teams)
     // Thus win rate should be a percentage of the maximum possible wins
     const maxPossibleWinsPerTournament = 7;
-    const winRate = gamesPlayed > 0 ? (wins / gamesPlayed) / maxPossibleWinsPerTournament : 0;
+    const winRate = gamesPlayed > 0
+      ? (wins / gamesPlayed) / maxPossibleWinsPerTournament
+      : 0;
 
     rankings.push({
       id: player.id,

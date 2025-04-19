@@ -1,14 +1,17 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with
+code in this repository.
 
 ## Commands
+
 - Build/Run: `deno task dev` or `deno run --watch main.ts`
 - Test: `deno test` or `deno test main_test.ts` for specific test
 - Lint: `deno lint`
 - Format: `deno fmt`
 
 ## Code Style Guidelines
+
 - Use TypeScript types for all functions and variables
 - Prefer async/await over callbacks
 - Use camelCase for variables and functions

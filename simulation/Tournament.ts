@@ -13,16 +13,17 @@ export class Tournament {
     this.agents = agents;
     this.gameSimulator = new GameSimulator();
     this.availablePlayers = [...allPlayers]; // Clone the array
-    
+
     // Initialize global player statistics
-    allPlayers.forEach(player => {
+    allPlayers.forEach((player) => {
       this.globalPlayerStats.set(player.id, {
         playerId: player.id,
         playerName: player.name,
         atBats: 0,
+        hits: 0,
         runs: 0,
         inningsPitched: 0,
-        strikeouts: 0
+        strikeouts: 0,
       });
     });
   }
@@ -70,12 +71,13 @@ export class Tournament {
         }
 
         try {
-          const [winner, _loser, winnerScore, loserScore, gameStats] = this.gameSimulator
+          const [winner, _loser, winnerScore, loserScore, gameStats] = this
+            .gameSimulator
             .simulateGame(teamA, teamB);
-          
+
           // Update player statistics from this game
           this.updatePlayerStats(gameStats);
-          
+
           // Update agent statistics for the current game
           this.agents[i].updatePlayerStats(gameStats);
           this.agents[j].updatePlayerStats(gameStats);
@@ -119,20 +121,20 @@ export class Tournament {
   createNextGeneration(rankedAgents: DraftingAgent[]): DraftingAgent[] {
     const newAgents: DraftingAgent[] = [];
     const numAgents = this.agents.length;
-    
+
     // Keep the top 4 agents (or fewer if we have less than 4)
     const topAgentsCount = Math.min(4, rankedAgents.length);
     for (let i = 0; i < topAgentsCount; i++) {
       // Update lifetime statistics for continuing agents
       rankedAgents[i].updateLifetimeStats();
-      
+
       // Keep the top agents unchanged
       newAgents.push(rankedAgents[i]);
     }
-    
+
     // Calculate the next available agent ID (should be the max ID + 1)
     let nextAgentId = this.getMaxAgentId() + 1;
-    
+
     // Only the top 3 agents produce offspring
     const reproducingAgentsCount = Math.min(3, topAgentsCount);
     for (let i = 0; i < reproducingAgentsCount; i++) {
@@ -141,13 +143,13 @@ export class Tournament {
       newAgents.push(newAgent);
       nextAgentId++;
     }
-    
+
     // Add one completely random agent
     const randomAgent = new DraftingAgent(nextAgentId);
     randomAgent.team.name = `Team ${nextAgentId}`;
     newAgents.push(randomAgent);
     nextAgentId++;
-    
+
     // Fill any remaining slots with new random agents if needed
     // (this should not happen if we have 8 agents with 4 top agents and 3 offspring + 1 random agent)
     for (let i = newAgents.length; i < numAgents; i++) {
@@ -156,10 +158,10 @@ export class Tournament {
       newAgents.push(newAgent);
       nextAgentId++;
     }
-    
+
     return newAgents;
   }
-  
+
   // Helper function to find the maximum agent ID
   private getMaxAgentId(): number {
     let maxId = -1;
@@ -181,7 +183,7 @@ export class Tournament {
       return [];
     }
   }
-  
+
   // Update global player statistics
   updatePlayerStats(gameStats: Map<number, PlayerStatistics>): void {
     gameStats.forEach((stats, playerId) => {
@@ -196,7 +198,7 @@ export class Tournament {
       }
     });
   }
-  
+
   // Get global player statistics
   getGlobalPlayerStats(): Map<number, PlayerStatistics> {
     return this.globalPlayerStats;

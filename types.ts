@@ -17,6 +17,7 @@ export interface PlayerStatistics {
   playerId: number;
   playerName: string;
   atBats: number;
+  hits: number;
   runs: number;
   inningsPitched: number;
   strikeouts: number;
