@@ -13,7 +13,8 @@ export class GameSimulator {
     }, team.players[0]);
   }
 
-  // TODO: calculate single, double, triple, or run?
+  // TODO: calculate single, double, triple, or run!
+  // add score when 
 
   // Calculate run probability based on batter vs pitcher matchup
   private calculateRunProbability(batter: Player, pitcher: Player): number {
@@ -53,6 +54,7 @@ export class GameSimulator {
     // Each player gets a chance to bat
     for (let i = 0; i < Math.min(3, battingTeam.players.length); i++) {
       // Get current batter (rotating through the lineup)
+      // TODO: currently only the first three players bat on each team!
       const batter = battingTeam.players[i];
       
       // Initialize or update batter stats

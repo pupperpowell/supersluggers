@@ -2,6 +2,9 @@ import { GenerationResult, Player } from "../types.ts";
 import { DraftingAgent } from "../agents/DraftingAgent.ts";
 import { Tournament } from "./Tournament.ts";
 
+// TODO: top two teams reproduce, bottom four are random?
+// TODO: measure agent effectiveness!!!
+
 // Main evolution simulation
 export class EvolutionSimulator {
   tournament: Tournament;
@@ -10,7 +13,7 @@ export class EvolutionSimulator {
   generationResults: GenerationResult[] = [];
   onGenerationComplete?: (result: GenerationResult) => void;
 
-  constructor(numAgents: number = 8, maxGenerations: number = 1000) {
+  constructor(numAgents: number = 8, maxGenerations: number = 100000) {
     // Create initial agents
     const agents: DraftingAgent[] = [];
     for (let i = 0; i < numAgents; i++) {
