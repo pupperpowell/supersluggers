@@ -10,7 +10,7 @@ export class EvolutionSimulator {
   generationResults: GenerationResult[] = [];
   onGenerationComplete?: (result: GenerationResult) => void;
 
-  constructor(numAgents: number = 8, maxGenerations: number = 5000) {
+  constructor(numAgents: number = 8, maxGenerations: number = 1000) {
     // Create initial agents
     const agents: DraftingAgent[] = [];
     for (let i = 0; i < numAgents; i++) {
@@ -46,6 +46,45 @@ export class EvolutionSimulator {
   // Get all generation results
   getGenerationResults(): GenerationResult[] {
     return this.generationResults;
+  }
+
+  // Print player statistics summary
+  printPlayerStatsSummary(): void {
+    console.log("\n=== PLAYER STATISTICS SUMMARY ===");
+    
+    // Get the global player statistics
+    const globalPlayerStats = this.tournament.getGlobalPlayerStats();
+    
+    // Convert map to array for sorting
+    const playerStatsArray = Array.from(globalPlayerStats.values());
+    
+    // Sort batters by runs scored
+    const topBatters = [...playerStatsArray]
+      .filter(stats => stats.atBats > 0)
+      .sort((a, b) => b.runs - a.runs);
+      
+    console.log("\nTop Batters by Runs Scored:");
+    topBatters.slice(0, 10).forEach((stats, index) => {
+      const battingAvg = stats.runs / stats.atBats;
+      console.log(
+        `${index + 1}. ${stats.playerName} - Runs: ${stats.runs}, At Bats: ${stats.atBats}, Avg: ${battingAvg.toFixed(3)}`
+      );
+    });
+    
+    // Sort pitchers by strikeouts
+    const topPitchers = [...playerStatsArray]
+      .filter(stats => stats.inningsPitched > 0)
+      .sort((a, b) => b.strikeouts - a.strikeouts);
+      
+    console.log("\nTop Pitchers by Strikeouts:");
+    topPitchers.slice(0, 10).forEach((stats, index) => {
+      const strikeoutsPerInning = stats.strikeouts / stats.inningsPitched;
+      console.log(
+        `${index + 1}. ${stats.playerName} - Strikeouts: ${stats.strikeouts}, Innings Pitched: ${stats.inningsPitched}, K/IP: ${strikeoutsPerInning.toFixed(2)}`
+      );
+    });
+    
+    console.log("\n=== END OF PLAYER STATISTICS SUMMARY ===");
   }
 
   // Print overall simulation summary
@@ -146,6 +185,9 @@ export class EvolutionSimulator {
         }
       }
     }
+    
+    // Print player statistics summary
+    this.printPlayerStatsSummary();
 
     console.log("\n=== END OF SIMULATION SUMMARY ===");
   }
@@ -203,6 +245,14 @@ export class EvolutionSimulator {
       if (gen < this.maxGenerations - 1) {
         const newAgents = this.tournament.createNextGeneration(rankedAgents);
         this.tournament.agents = newAgents;
+        
+        // Log information about the new generation
+        console.log("\nCreating Generation " + (gen + 2) + ":");
+        console.log("Agents continuing to next generation: " + 
+                    newAgents.slice(0, 4).map(a => `Agent ${a.id}`).join(", "));
+        console.log("New offspring: " + 
+                    newAgents.slice(4, 7).map(a => `Agent ${a.id} (parent: Agent ${newAgents[newAgents.indexOf(a) - 4].id})`).join(", "));
+        console.log("New random agent: Agent " + newAgents[7].id);
       }
     }
 
@@ -210,6 +260,6 @@ export class EvolutionSimulator {
     this.printSimulationSummary();
 
     console.log("Evolution simulation complete!");
-    return this.generationResults;
+    return Promise.resolve(this.generationResults);
   }
 }

@@ -12,6 +12,16 @@ export interface Player {
   isCaptain: boolean;
 }
 
+// Player statistics tracking
+export interface PlayerStatistics {
+  playerId: number;
+  playerName: string;
+  atBats: number;
+  runs: number;
+  inningsPitched: number;
+  strikeouts: number;
+}
+
 // Generation Result data for tracking simulation progress
 export interface GenerationResult {
   generation: number;

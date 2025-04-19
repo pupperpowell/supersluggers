@@ -1,4 +1,4 @@
-import { Player } from "../types.ts";
+import { Player, PlayerStatistics } from "../types.ts";
 import { DraftingAgent } from "../agents/DraftingAgent.ts";
 import { GameSimulator } from "./GameSimulator.ts";
 
@@ -7,11 +7,24 @@ export class Tournament {
   agents: DraftingAgent[];
   gameSimulator: GameSimulator;
   availablePlayers: Player[];
+  globalPlayerStats: Map<number, PlayerStatistics> = new Map();
 
   constructor(agents: DraftingAgent[], allPlayers: Player[]) {
     this.agents = agents;
     this.gameSimulator = new GameSimulator();
     this.availablePlayers = [...allPlayers]; // Clone the array
+    
+    // Initialize global player statistics
+    allPlayers.forEach(player => {
+      this.globalPlayerStats.set(player.id, {
+        playerId: player.id,
+        playerName: player.name,
+        atBats: 0,
+        runs: 0,
+        inningsPitched: 0,
+        strikeouts: 0
+      });
+    });
   }
 
   runDraft(): void {
@@ -34,7 +47,7 @@ export class Tournament {
   }
 
   runTournament(): DraftingAgent[] {
-    console.log("Each agent is drafting a team...");
+    // console.log("Each agent is drafting a team...");
     // Run a round-robin tournament
     const results: Record<number, number> = {};
     const scores: Record<number, number> = {};
@@ -57,8 +70,15 @@ export class Tournament {
         }
 
         try {
-          const [winner, _loser, winnerScore, loserScore] = this.gameSimulator
+          const [winner, _loser, winnerScore, loserScore, gameStats] = this.gameSimulator
             .simulateGame(teamA, teamB);
+          
+          // Update player statistics from this game
+          this.updatePlayerStats(gameStats);
+          
+          // Update agent statistics for the current game
+          this.agents[i].updatePlayerStats(gameStats);
+          this.agents[j].updatePlayerStats(gameStats);
 
           // Update results
           if (winner === teamA) {
@@ -99,29 +119,56 @@ export class Tournament {
   createNextGeneration(rankedAgents: DraftingAgent[]): DraftingAgent[] {
     const newAgents: DraftingAgent[] = [];
     const numAgents = this.agents.length;
-
-    // Top agent gets 4 children
-    for (let i = 0; i < 4; i++) {
-      newAgents.push(rankedAgents[0].reproduce(0.1, newAgents.length));
+    
+    // Keep the top 4 agents (or fewer if we have less than 4)
+    const topAgentsCount = Math.min(4, rankedAgents.length);
+    for (let i = 0; i < topAgentsCount; i++) {
+      // Update lifetime statistics for continuing agents
+      rankedAgents[i].updateLifetimeStats();
+      
+      // Keep the top agents unchanged
+      newAgents.push(rankedAgents[i]);
     }
-
-    // Agents 2-4 get one child each
-    for (let i = 1; i < 4 && i < rankedAgents.length; i++) {
-      newAgents.push(rankedAgents[i].reproduce(0.1, newAgents.length));
+    
+    // Calculate the next available agent ID (should be the max ID + 1)
+    let nextAgentId = this.getMaxAgentId() + 1;
+    
+    // Only the top 3 agents produce offspring
+    const reproducingAgentsCount = Math.min(3, topAgentsCount);
+    for (let i = 0; i < reproducingAgentsCount; i++) {
+      const newAgent = rankedAgents[i].reproduce(0.1, nextAgentId);
+      newAgent.team.name = `Team ${nextAgentId}`;
+      newAgents.push(newAgent);
+      nextAgentId++;
     }
-
-    // Fill the rest with random new agents if needed
+    
+    // Add one completely random agent
+    const randomAgent = new DraftingAgent(nextAgentId);
+    randomAgent.team.name = `Team ${nextAgentId}`;
+    newAgents.push(randomAgent);
+    nextAgentId++;
+    
+    // Fill any remaining slots with new random agents if needed
+    // (this should not happen if we have 8 agents with 4 top agents and 3 offspring + 1 random agent)
     for (let i = newAgents.length; i < numAgents; i++) {
-      newAgents.push(new DraftingAgent(i));
+      const newAgent = new DraftingAgent(nextAgentId);
+      newAgent.team.name = `Team ${nextAgentId}`;
+      newAgents.push(newAgent);
+      nextAgentId++;
     }
-
-    // Update agent IDs to match their indices
-    newAgents.forEach((agent, index) => {
-      agent.id = index;
-      agent.team.name = `Team ${index}`;
-    });
-
+    
     return newAgents;
+  }
+  
+  // Helper function to find the maximum agent ID
+  private getMaxAgentId(): number {
+    let maxId = -1;
+    for (const agent of this.agents) {
+      if (agent.id > maxId) {
+        maxId = agent.id;
+      }
+    }
+    return maxId;
   }
 
   // Helper to load players from JSON
@@ -133,5 +180,25 @@ export class Tournament {
       console.error("Error loading players:", error);
       return [];
     }
+  }
+  
+  // Update global player statistics
+  updatePlayerStats(gameStats: Map<number, PlayerStatistics>): void {
+    gameStats.forEach((stats, playerId) => {
+      if (this.globalPlayerStats.has(playerId)) {
+        const globalStats = this.globalPlayerStats.get(playerId)!;
+        globalStats.atBats += stats.atBats;
+        globalStats.runs += stats.runs;
+        globalStats.inningsPitched += stats.inningsPitched;
+        globalStats.strikeouts += stats.strikeouts;
+      } else {
+        this.globalPlayerStats.set(playerId, { ...stats });
+      }
+    });
+  }
+  
+  // Get global player statistics
+  getGlobalPlayerStats(): Map<number, PlayerStatistics> {
+    return this.globalPlayerStats;
   }
 }

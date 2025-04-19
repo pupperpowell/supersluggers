@@ -1,5 +1,5 @@
 import { Architect } from "synaptic";
-import { Player } from "../types.ts";
+import { Player, PlayerStatistics } from "../types.ts";
 import { Team } from "../models/Player.ts";
 
 // DraftingAgent class using neural network to select players
@@ -9,6 +9,12 @@ export class DraftingAgent {
   id: number;
   tournamentScore: number = 0;
   tournamentWins: number = 0;
+  
+  // Lifetime stats tracking
+  lifetimeWins: number = 0;
+  lifetimeScore: number = 0;
+  generations: number = 1;
+  playerStats: Map<number, PlayerStatistics> = new Map();
   
   constructor(id: number, network?: Architect.Perceptron) {
     this.id = id;
@@ -63,6 +69,18 @@ export class DraftingAgent {
     // Add the best player to the team
     if (bestPlayer) {
       this.team.addPlayer(bestPlayer);
+      
+      // Initialize player stats if this is the first time we've seen this player
+      if (!this.playerStats.has(bestPlayer.id)) {
+        this.playerStats.set(bestPlayer.id, {
+          playerId: bestPlayer.id,
+          playerName: bestPlayer.name,
+          atBats: 0,
+          runs: 0,
+          inningsPitched: 0,
+          strikeouts: 0
+        });
+      }
     }
     
     return bestPlayer;
@@ -92,10 +110,35 @@ export class DraftingAgent {
     child.tournamentScore = 0;
     child.tournamentWins = 0;
     
+    // Pass on the parent's lifetime statistics to the child
+    child.playerStats = new Map(this.playerStats);
+    
     return child;
   }
   
   resetTeam(): void {
     this.team = new Team(`Team ${this.id}`);
+  }
+  
+  // Update player statistics with game results
+  updatePlayerStats(playerStats: Map<number, PlayerStatistics>): void {
+    playerStats.forEach((stats, playerId) => {
+      if (this.playerStats.has(playerId)) {
+        const existingStats = this.playerStats.get(playerId)!;
+        existingStats.atBats += stats.atBats;
+        existingStats.runs += stats.runs;
+        existingStats.inningsPitched += stats.inningsPitched;
+        existingStats.strikeouts += stats.strikeouts;
+      } else {
+        this.playerStats.set(playerId, { ...stats });
+      }
+    });
+  }
+  
+  // Update lifetime stats when generation ends
+  updateLifetimeStats(): void {
+    this.lifetimeWins += this.tournamentWins;
+    this.lifetimeScore += this.tournamentScore;
+    this.generations += 1;
   }
 }

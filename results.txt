@@ -1,0 +1,234 @@
+# first run
+
+===== PLAYER RANKINGS BY WINS =====
+Rank | Player Name         | Wins  | Games | Win Rate
+-----|--------------------:|------:|------:|--------:
+   1 | Birdo                | 14120 |  5000 | 40.34%
+   2 | Bowser               | 14070 |  5000 | 40.20%
+   3 | Donkey Kong          | 13600 |  5000 | 38.86%
+   4 | Wario                | 12172 |  5000 | 34.78%
+   5 | King K. Rool         | 11964 |  5000 | 34.18%
+   6 | Petey Piranha        | 11930 |  5000 | 34.09%
+   7 | Daisy                | 11874 |  5000 | 33.93%
+   8 | Mario                | 11621 |  5000 | 33.20%
+   9 | Funky Kong           | 11536 |  5000 | 32.96%
+  10 | Dark Dry Bones       | 10952 |  5000 | 31.29%
+  11 | Luigi                | 10754 |  5000 | 30.73%
+  12 | Blue Pianta          | 10671 |  5000 | 30.49%
+  13 | Bowser Jr.           | 10327 |  5000 | 29.51%
+  14 | Boomerang Bro        |  9818 |  5000 | 28.05%
+  15 | Dry Bones            |  9818 |  5000 | 28.05%
+  16 | King Boo             |  9760 |  5000 | 27.89%
+  17 | Peach                |  9243 |  5000 | 26.41%
+  18 | Tiny Kong            |  8996 |  5000 | 25.70%
+  19 | Red Kritter          |  8949 |  5000 | 25.57%
+  20 | Waluigi              |  8945 |  5000 | 25.56%
+  21 | Yellow Pianta        |  8874 |  5000 | 25.35%
+  22 | Red Pianta           |  8816 |  5000 | 25.19%
+  23 | Fire Bro             |  8543 |  5000 | 24.41%
+  24 | Kritter              |  8422 |  5000 | 24.06%
+  25 | Brown Kritter        |  8384 |  5000 | 23.95%
+  26 | Green Dry Bones      |  8168 |  5000 | 23.34%
+  27 | Diddy Kong           |  8077 |  5000 | 23.08%
+  28 | Wiggler              |  7929 |  5000 | 22.65%
+  29 | Blue Dry Bones       |  7779 |  5000 | 22.23%
+  30 | Blue Kritter         |  7581 |  5000 | 21.66%
+  31 | Hammer Bro           |  7510 |  5000 | 21.46%
+  32 | Baby Donkey Kong     |  6934 |  5000 | 19.81%
+  33 | Red Koopa Troopa     |  6420 |  5000 | 18.34%
+  34 | Purple Toad          |  6240 |  5000 | 17.83%
+  35 | Mii                  |  6146 |  5000 | 17.56%
+  36 | Yoshi                |  5959 |  5000 | 17.03%
+  37 | Blue Toad            |  5912 |  5000 | 16.89%
+  38 | Yellow Toad          |  5394 |  5000 | 15.41%
+  39 | Blooper              |  5301 |  5000 | 15.15%
+  40 | Baby Daisy           |  5203 |  5000 | 14.87%
+  41 | Red Magikoopa        |  5156 |  5000 | 14.73%
+  42 | Green Paratroopa     |  5124 |  5000 | 14.64%
+  43 | Boo                  |  4923 |  5000 | 14.07%
+  44 | Red Toad             |  4886 |  5000 | 13.96%
+  45 | Green Koopa Troopa   |  4827 |  5000 | 13.79%
+  46 | Green Shy Guy        |  4827 |  5000 | 13.79%
+  47 | Green Noki           |  4787 |  5000 | 13.68%
+  48 | Paragoomba           |  4754 |  5000 | 13.58%
+  49 | Red Shy Guy          |  4717 |  5000 | 13.48%
+  50 | Yellow Magikoopa     |  4555 |  5000 | 13.01%
+  51 | Green Toad           |  4440 |  5000 | 12.69%
+  52 | Magikoopa            |  4298 |  5000 | 12.28%
+  53 | Toadsworth           |  4180 |  5000 | 11.94%
+  54 | Red Paratroopa       |  4124 |  5000 | 11.78%
+  55 | Grey Shy Guy         |  4117 |  5000 | 11.76%
+  56 | Baby Peach           |  3888 |  5000 | 11.11%
+  57 | Blue Shy Guy         |  3885 |  5000 | 11.10%
+  58 | Monty Mole           |  3791 |  5000 | 10.83%
+  59 | Yellow Yoshi         |  3613 |  5000 | 10.32%
+  60 | Yellow Shy Guy       |  3613 |  5000 | 10.32%
+  61 | Blue Noki            |  3302 |  5000 | 9.43%
+  62 | Red Noki             |  3295 |  5000 | 9.41%
+  63 | Dixie Kong           |  3216 |  5000 | 9.19%
+  64 | Pink Yoshi           |  3200 |  5000 | 9.14%
+  65 | Goomba               |  3147 |  5000 | 8.99%
+  66 | Green Magikoopa      |  3038 |  5000 | 8.68%
+  67 | Light Blue Yoshi     |  2850 |  5000 | 8.14%
+  68 | Blue Yoshi           |  2642 |  5000 | 7.55%
+  69 | Baby Mario           |  2606 |  5000 | 7.45%
+  70 | Toadette             |  2496 |  5000 | 7.13%
+  71 | Red Yoshi            |  2413 |  5000 | 6.89%
+  72 | Baby Luigi           |  2369 |  5000 | 6.77%
+
+# second run
+
+===== PLAYER RANKINGS BY WINS =====
+Rank | Player Name         | Wins  | Games | Win Rate
+-----|--------------------:|------:|------:|--------:
+   1 | Bowser               | 56487 | 20000 | 40.35%
+   2 | Birdo                | 56409 | 20000 | 40.29%
+   3 | Donkey Kong          | 54432 | 20000 | 38.88%
+   4 | Wario                | 49218 | 20000 | 35.16%
+   5 | King K. Rool         | 47854 | 20000 | 34.18%
+   6 | Daisy                | 47579 | 20000 | 33.99%
+   7 | Petey Piranha        | 46554 | 20000 | 33.25%
+   8 | Mario                | 46492 | 20000 | 33.21%
+   9 | Funky Kong           | 45491 | 20000 | 32.49%
+  10 | Dark Dry Bones       | 43770 | 20000 | 31.26%
+  11 | Luigi                | 42982 | 20000 | 30.70%
+  12 | Blue Pianta          | 42190 | 20000 | 30.14%
+  13 | Bowser Jr.           | 41489 | 20000 | 29.64%
+  14 | Boomerang Bro        | 39552 | 20000 | 28.25%
+  15 | Dry Bones            | 39244 | 20000 | 28.03%
+  16 | King Boo             | 38912 | 20000 | 27.79%
+  17 | Peach                | 36523 | 20000 | 26.09%
+  18 | Tiny Kong            | 36368 | 20000 | 25.98%
+  19 | Yellow Pianta        | 35733 | 20000 | 25.52%
+  20 | Red Kritter          | 35717 | 20000 | 25.51%
+  21 | Waluigi              | 35098 | 20000 | 25.07%
+  22 | Red Pianta           | 34770 | 20000 | 24.84%
+  23 | Kritter              | 33858 | 20000 | 24.18%
+  24 | Fire Bro             | 33728 | 20000 | 24.09%
+  25 | Brown Kritter        | 33559 | 20000 | 23.97%
+  26 | Green Dry Bones      | 32405 | 20000 | 23.15%
+  27 | Diddy Kong           | 32117 | 20000 | 22.94%
+  28 | Blue Dry Bones       | 31960 | 20000 | 22.83%
+  29 | Wiggler              | 31768 | 20000 | 22.69%
+  30 | Blue Kritter         | 30392 | 20000 | 21.71%
+  31 | Hammer Bro           | 30378 | 20000 | 21.70%
+  32 | Baby Donkey Kong     | 27361 | 20000 | 19.54%
+  33 | Red Koopa Troopa     | 25224 | 20000 | 18.02%
+  34 | Mii                  | 24708 | 20000 | 17.65%
+  35 | Purple Toad          | 24551 | 20000 | 17.54%
+  36 | Blue Toad            | 24177 | 20000 | 17.27%
+  37 | Yoshi                | 24019 | 20000 | 17.16%
+  38 | Yellow Toad          | 21530 | 20000 | 15.38%
+  39 | Blooper              | 21198 | 20000 | 15.14%
+  40 | Baby Daisy           | 20695 | 20000 | 14.78%
+  41 | Red Magikoopa        | 20312 | 20000 | 14.51%
+  42 | Green Paratroopa     | 19985 | 20000 | 14.27%
+  43 | Red Toad             | 19670 | 20000 | 14.05%
+  44 | Green Noki           | 19643 | 20000 | 14.03%
+  45 | Red Shy Guy          | 19466 | 20000 | 13.90%
+  46 | Boo                  | 19327 | 20000 | 13.80%
+  47 | Green Koopa Troopa   | 19325 | 20000 | 13.80%
+  48 | Green Shy Guy        | 18966 | 20000 | 13.55%
+  49 | Paragoomba           | 18869 | 20000 | 13.48%
+  50 | Yellow Magikoopa     | 18220 | 20000 | 13.01%
+  51 | Green Toad           | 18095 | 20000 | 12.93%
+  52 | Red Paratroopa       | 16592 | 20000 | 11.85%
+  53 | Magikoopa            | 16547 | 20000 | 11.82%
+  54 | Grey Shy Guy         | 16287 | 20000 | 11.63%
+  55 | Toadsworth           | 16216 | 20000 | 11.58%
+  56 | Blue Shy Guy         | 15836 | 20000 | 11.31%
+  57 | Baby Peach           | 15119 | 20000 | 10.80%
+  58 | Monty Mole           | 14855 | 20000 | 10.61%
+  59 | Yellow Shy Guy       | 14592 | 20000 | 10.42%
+  60 | Yellow Yoshi         | 14063 | 20000 | 10.05%
+  61 | Blue Noki            | 13702 | 20000 | 9.79%
+  62 | Red Noki             | 13273 | 20000 | 9.48%
+  63 | Pink Yoshi           | 13002 | 20000 | 9.29%
+  64 | Dixie Kong           | 12533 | 20000 | 8.95%
+  65 | Goomba               | 12373 | 20000 | 8.84%
+  66 | Light Blue Yoshi     | 11899 | 20000 | 8.50%
+  67 | Green Magikoopa      | 11650 | 20000 | 8.32%
+  68 | Blue Yoshi           | 10837 | 20000 | 7.74%
+  69 | Baby Mario           | 10760 | 20000 | 7.69%
+  70 | Toadette             | 10096 | 20000 | 7.21%
+  71 | Red Yoshi            |  9721 | 20000 | 6.94%
+  72 | Baby Luigi           |  9592 | 20000 | 6.85%
+
+  # third run
+
+
+===== PLAYER RANKINGS BY WINS =====
+Rank | Player Name         | Wins  | Games | Win Rate
+-----|--------------------:|------:|------:|--------:
+   1 | Bowser               | 14144 |  5000 | 40.41%
+   2 | Birdo                | 14090 |  5000 | 40.26%
+   3 | Donkey Kong          | 13546 |  5000 | 38.70%
+   4 | Wario                | 12175 |  5000 | 34.79%
+   5 | King K. Rool         | 11850 |  5000 | 33.86%
+   6 | Daisy                | 11794 |  5000 | 33.70%
+   7 | Mario                | 11509 |  5000 | 32.88%
+   8 | Petey Piranha        | 11476 |  5000 | 32.79%
+   9 | Funky Kong           | 11457 |  5000 | 32.73%
+  10 | Dark Dry Bones       | 11023 |  5000 | 31.49%
+  11 | Luigi                | 10712 |  5000 | 30.61%
+  12 | Blue Pianta          | 10623 |  5000 | 30.35%
+  13 | Bowser Jr.           | 10381 |  5000 | 29.66%
+  14 | Boomerang Bro        |  9881 |  5000 | 28.23%
+  15 | Dry Bones            |  9862 |  5000 | 28.18%
+  16 | King Boo             |  9591 |  5000 | 27.40%
+  17 | Peach                |  8991 |  5000 | 25.69%
+  18 | Red Kritter          |  8951 |  5000 | 25.57%
+  19 | Tiny Kong            |  8878 |  5000 | 25.37%
+  20 | Waluigi              |  8667 |  5000 | 24.76%
+  21 | Yellow Pianta        |  8604 |  5000 | 24.58%
+  22 | Red Pianta           |  8551 |  5000 | 24.43%
+  23 | Brown Kritter        |  8471 |  5000 | 24.20%
+  24 | Fire Bro             |  8468 |  5000 | 24.19%
+  25 | Kritter              |  8382 |  5000 | 23.95%
+  26 | Green Dry Bones      |  8114 |  5000 | 23.18%
+  27 | Blue Dry Bones       |  7997 |  5000 | 22.85%
+  28 | Diddy Kong           |  7982 |  5000 | 22.81%
+  29 | Wiggler              |  7949 |  5000 | 22.71%
+  30 | Hammer Bro           |  7483 |  5000 | 21.38%
+  31 | Blue Kritter         |  7359 |  5000 | 21.03%
+  32 | Baby Donkey Kong     |  6956 |  5000 | 19.87%
+  33 | Mii                  |  6331 |  5000 | 18.09%
+  34 | Red Koopa Troopa     |  6298 |  5000 | 17.99%
+  35 | Purple Toad          |  6193 |  5000 | 17.69%
+  36 | Blue Toad            |  6098 |  5000 | 17.42%
+  37 | Yoshi                |  5983 |  5000 | 17.09%
+  38 | Yellow Toad          |  5380 |  5000 | 15.37%
+  39 | Blooper              |  5098 |  5000 | 14.57%
+  40 | Baby Daisy           |  5036 |  5000 | 14.39%
+  41 | Red Toad             |  4943 |  5000 | 14.12%
+  42 | Green Paratroopa     |  4915 |  5000 | 14.04%
+  43 | Red Magikoopa        |  4906 |  5000 | 14.02%
+  44 | Green Noki           |  4854 |  5000 | 13.87%
+  45 | Boo                  |  4795 |  5000 | 13.70%
+  46 | Green Shy Guy        |  4785 |  5000 | 13.67%
+  47 | Green Koopa Troopa   |  4682 |  5000 | 13.38%
+  48 | Green Toad           |  4642 |  5000 | 13.26%
+  49 | Red Shy Guy          |  4642 |  5000 | 13.26%
+  50 | Paragoomba           |  4622 |  5000 | 13.21%
+  51 | Yellow Magikoopa     |  4616 |  5000 | 13.19%
+  52 | Magikoopa            |  4110 |  5000 | 11.74%
+  53 | Grey Shy Guy         |  4080 |  5000 | 11.66%
+  54 | Toadsworth           |  4030 |  5000 | 11.51%
+  55 | Red Paratroopa       |  3973 |  5000 | 11.35%
+  56 | Blue Shy Guy         |  3849 |  5000 | 11.00%
+  57 | Baby Peach           |  3753 |  5000 | 10.72%
+  58 | Monty Mole           |  3679 |  5000 | 10.51%
+  59 | Yellow Yoshi         |  3577 |  5000 | 10.22%
+  60 | Yellow Shy Guy       |  3452 |  5000 | 9.86%
+  61 | Blue Noki            |  3366 |  5000 | 9.62%
+  62 | Red Noki             |  3281 |  5000 | 9.37%
+  63 | Dixie Kong           |  3130 |  5000 | 8.94%
+  64 | Pink Yoshi           |  3080 |  5000 | 8.80%
+  65 | Light Blue Yoshi     |  2947 |  5000 | 8.42%
+  66 | Goomba               |  2944 |  5000 | 8.41%
+  67 | Green Magikoopa      |  2921 |  5000 | 8.35%
+  68 | Blue Yoshi           |  2637 |  5000 | 7.53%
+  69 | Baby Mario           |  2632 |  5000 | 7.52%
+  70 | Toadette             |  2555 |  5000 | 7.30%
+  71 | Red Yoshi            |  2397 |  5000 | 6.85%
+  72 | Baby Luigi           |  2315 |  5000 | 6.61%

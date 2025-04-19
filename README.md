@@ -12,10 +12,10 @@ This project simulates the evolution of drafting strategies for Super Mario Slug
 
 4. A season's worth of games is simulated using player stats and a bit of random chance, with teams playing in a round-robin tournament.
 
-5. At the end of the season, the top four teams (drafting agents) survive to the next generation:
-   - The #1 team has four children
-   - Teams #2-4 each have one child
-   - These children have slightly mutated neural networks
+5. At the end of the season, the top three agents survive to the next generation:
+
+   - They create three new agents with slightly mutated weights
+   - One agent with random weights plays every round
 
 6. The draft and simulation process repeats for multiple generations.
 
@@ -34,6 +34,7 @@ deno task test
 ## Project Structure
 
 ### Core Files
+
 - `main.ts` - Core implementation with all classes and simulation logic
 - `characterData.json` - Player data with stats for all characters
 - `main_test.ts` - Unit tests for all components of the simulator
@@ -41,6 +42,7 @@ deno task test
 ## Neural Network Design
 
 The drafting agent uses a neural network with:
+
 - Input layer: Player stats (pitching, batting, fielding, running) + current team stats
 - Hidden layers: Two layers with 10 and 5 neurons
 - Output: A single value representing the "desirability" of a player
@@ -50,6 +52,7 @@ Each generation, the neural networks are mutated slightly to evolve better draft
 ## Game Simulation
 
 The game simulator calculates run probabilities based on:
+
 - Batting team's batting strength vs. pitching team's pitching strength
 - Fielding stats to determine run prevention
 - Random elements to simulate unpredictability
